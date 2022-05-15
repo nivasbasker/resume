@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Macondo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index-style.css">
+
+  </head>
+  <body>
+
+    <script type="text/javascript">
+
+      let tits = [
+        "Andorid apps",
+        "UI/UX designs",
+        "Frontend projects",
+        "Robotics with verilog"
+      ];
+      let abt = [
+        "Designed and developed few android apps. Once done for an ed-tech startup Codewithzio",
+        "Designed several pages for College fests, college clubs and for personal projects",
+        "Developed my own designs. I have been in web dev team of the college too",
+        "Started robotics as a hobby. learnt verilog language. Been to finals of IIT bombat EYRC constest"
+      ];
+      let links = [
+        "Andoid apps",
+        "UI/UX designs",
+        "Robotics with verilog",
+        "Frontend projects"
+      ];
+
+      function show_pro(s){
+
+        for(let i=1; i<=4; i++){
+          let em = document.getElementById('i'+ i);
+          em.className = "round_img";
+        }
+
+        let em = document.getElementById('i'+s);
+        em.className+="_active";
+
+        let ti=document.getElementById("title");
+        ti.innerHTML = tits[s-1];
+        let ab=document.getElementById("about");
+        ab.innerHTML = abt[s-1];
+      }
+
+
+    </script>
+    <header>
+
+      <nav>
+        <div class="left">
+          <ul>
+            <li><a href="#home" style="margin-right : 15px;"><img src="assets/icon.svg" alt=""></a></li>
+            <li><a href="#home" ><b>Projects</b></a></li>
+            <li><a href="#home" ><b>About</b></a></li>
+          </ul>
+        </div>
+        <div class="center">
+          <h1>Company Name</h1>
+        </div>
+        <div class="right">
+          <ul>
+
+            <li><a href="#Team"><img src="assets/vector.svg" alt=""></a></li>
+            <li><a href="#Team"><img src="assets/vector-1.svg" alt=""></a></li>
+            <li><a href="#Team"><img src="assets/vector-2.svg" alt=""></a></li>
+
+          </ul>
+        </div>
+      </nav>
+      <div class="hero">
+        <div class="left_hero">
+          <h2>Nice to meet you too,<br>Hop In !</h2>
+          <br>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquam ut dolor in ultricies.
+            Sed justo lorem, laoreet et orci vel.</p>
+        </div>
+        <div class="right_hero">
+          <div class="faded_card" style="transform: rotate(-180deg);">
+
+          </div>
+          <div class="card">
+
+          </div>
+          <div class="faded_card">
+
+          </div>
+        </div>
+      </div>
+      <div class="stat">
+        <div class="stats">
+          <div class="points">
+            <img src="assets/Group-2.svg" alt="">
+            <h2>Android <br>Development</h2>
+          </div>
+          <div class="v_div"></div>
+          <div class="points">
+            <img src="assets/Group-1.svg" alt="">
+            <h2>Frontend <br> Development</h2>
+          </div>
+          <div class="v_div"></div>
+          <div class="points">
+            <img src="assets/Group.svg" alt="">
+            <h2>UI / UX <br>designing</h2>
+          </div>
+        </div>
+      </div>
+
+    </header>
+
+    <section class="second">
+      <div class="one">
+        <img src="assets/box.svg" style="transform: rotate(0deg);" alt="">
+        <h2 style=" transform: rotate(-90deg);">About Me</h2>
+      </div>
+
+      <div class="container">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquam ut dolor in ultricies.
+          Sed justo lorem, laoreet et orci vel, rutrum volutpat lectus. Nulla facilisi. Nam auctor id lectus id tincidunt.
+          Ut suscipit venenatis velit vel consequat. Mauris tincidunt nec diam non semper. Aliquam pellentesque dignissim fermentum.</p>
+      </div>
+      <div class="two">
+        <h2 style=" transform: rotate(90deg);">About Me</h2>
+        <img src="assets/box.svg" style="  transform: rotate(-180deg);"alt="">
+
+      </div>
+    </section>
+
+    <section class="third">
+      <div class="top_3">
+        <div class="left_3">
+            <h2 id="title">Android apps</h2>
+            <p id="about" >Designed and developed few android apps. Once done for an ed-tech startup Codewithzio</p>
+              <button class="btn2" type="button" name="button"> Know more </button>
+        </div>
+        <div class="right_3">
+          <img src="" alt="">
+        </div>
+      </div>
+      <div class="bottom_3">
+          <ul>
+            <li id="1" onclick="show_pro(1)" >
+              <div id="i1" class="round_img_active">
+              <img src="" alt="">
+            </div>
+            <h4 id="t1">Android</h4>
+            </li>
+            <li id="2" onclick="show_pro(2)">
+              <div id="i2" class="round_img">
+              <img src="" alt="">
+            </div>
+            <h4 id="t2">UI/UX</h4>
+            </li>
+            <li id="3" onclick="show_pro(3)">
+              <div id="i3" class="round_img">
+              <img src="" alt="">
+            </div>
+            <h4 id="t3">Robotics</h4>
+            </li>
+            <li id="4" onclick="show_pro(4)">
+              <div id="i4" class="round_img">
+              <img src="" alt="">
+            </div>
+            <h4 id="t4">Frontend</h4>
+            </li>
+          </ul>
+      </div>
+
+
+  </section>
+  <section>
+    <div class="div4">
+      <div class="inner2">
+            <div class="left_in" style="min-width:250px; width:40%;" >
+              <h2>We'd love to work with you !!</h2>
+              <br>
+              <div class="stretch">
+                <i class="material-icons">mail</i>
+                <h4>nivasbasker@gmail.com</h4>
+              </div>
+              <div class="stretch">
+                <i class="material-icons">phone</i>
+                <h4>+91 9585224760</h4>
+              </div>
+              <div class="stretch">
+                <i class="material-icons">home</i>
+                <h4>14/7, Bharath Nagar <br> Perumbakkam East <br> Chennai-600027</h4>
+              </div>
+            </div>
+            <div class="right_in" style="width:40%; min-width:400px; ">
+                <form style="align-items : center; margin:0px;" action="none" method="post">
+                  <h2>Contact Us</h2><br>
+                  <input id="namebox" type="text" placeholder="Full Name"></input>
+                  <br>
+                  <input id="passwordbox" type="email" placeholder="Your Mail-Id"></input>
+                  <br>
+                  <!--<textarea name="name" rows="8" cols="40"></textarea>-->
+                  <input id="mailbox" type="text" placeholder="Message" style="height:100px;"></input> <br>
+                  <br>
+                  <button>Send</button><br>
+                </form>
+            </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+      <div class="lists">
+        <ul>
+          <li><a href="scr_crs/crossword.html">Crossword puzzle</a></li>
+          <li><a href="scr_crs/scramble.html">Word scramble</a></li>
+          <li><a href="slider_puzzle/index.html">Slider puzzle</a></li>
+          <li><a href="oiko/index.html">Monopoly game</a></li>
+        </ul>
+      </div>
+      <h4>(C) 2021 all rights reserved .</h4>
+  </footer>
+
+  </body>
+</html>
