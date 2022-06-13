@@ -18,6 +18,7 @@
 
     <script type="text/javascript">
 
+        let currentPage = 0;
       let tits = [
         "Andorid apps",
         "UI/UX designs",
@@ -31,14 +32,15 @@
         "Started robotics as a hobby. learnt verilog language. Been to finals of IIT bombat EYRC constest"
       ];
       let links = [
-        "Andoid apps",
-        "UI/UX designs",
-        "Robotics with verilog",
-        "Frontend projects"
+        "https://www.codewithzio.com/",
+          "https://www.figma.com/file/kDrmNKAUqp2X3pcJ9KRZMj/samples?node-id=0%3A1",
+          "https://nivasbasker.github.io/resume",
+        "https://github.com/nivasbasker"
+        
       ];
 
-      function show_pro(s){
-
+        function show_pro(s) {
+            currentPage = s - 1;
         for(let i=1; i<=4; i++){
           let em = document.getElementById('i'+ i);
           em.className = "round_img";
@@ -51,7 +53,11 @@
         ti.innerHTML = tits[s-1];
         let ab=document.getElementById("about");
         ab.innerHTML = abt[s-1];
-      }
+        }
+        function open_link() {
+            window.open(
+                links[currentPage], "_blank");
+        }
 
 
     </script>
@@ -60,7 +66,7 @@
       <nav>
         <div class="left">
           <ul>
-            <li><a href="#home" style="margin-right : 15px;"><img src="assets/icon.svg" alt=""></a></li>
+            <li><a href="#home" style="margin-right : 15px;"><img src="assets/Icon.svg" alt=""></a></li>
             <li><a href="#home" ><b>Projects</b></a></li>
             <li><a href="#home" ><b>About</b></a></li>
           </ul>
@@ -71,9 +77,9 @@
         <div class="right">
           <ul>
 
-            <li><a href="#Team"><img src="assets/vector.svg" alt=""></a></li>
-            <li><a href="#Team"><img src="assets/vector-1.svg" alt=""></a></li>
-            <li><a href="#Team"><img src="assets/vector-2.svg" alt=""></a></li>
+            <li><a href="#Team"><img src="assets/Vector.svg" alt=""></a></li>
+            <li><a href="#Team"><img src="assets/Vector-1.svg" alt=""></a></li>
+            <li><a href="#Team"><img src="assets/Vector-2.svg" alt=""></a></li>
 
           </ul>
         </div>
@@ -141,7 +147,7 @@
         <div class="left_3">
             <h2 id="title">Android apps</h2>
             <p id="about" >Designed and developed few android apps. Once done for an ed-tech startup Codewithzio</p>
-              <button class="btn2" type="button" name="button"> Know more </button>
+              <button class="button" type="button" name="button" onclick="open_link()"><span>Know more</span></button>
         </div>
         <div class="right_3">
           <img src="" alt="">
@@ -165,13 +171,13 @@
               <div id="i3" class="round_img">
               <img src="" alt="">
             </div>
-            <h4 id="t3">Robotics</h4>
+            <h4 id="t3">Frontend</h4>
             </li>
             <li id="4" onclick="show_pro(4)">
               <div id="i4" class="round_img">
               <img src="" alt="">
             </div>
-            <h4 id="t4">Frontend</h4>
+            <h4 id="t4">Robotics</h4>
             </li>
           </ul>
       </div>
@@ -182,7 +188,7 @@
     <div class="div4">
       <div class="inner2">
             <div class="left_in" style="min-width:250px; width:40%;" >
-              <h2>We'd love to work with you !!</h2>
+              <h2>I'd love to work with you !!</h2>
               <br>
               <div class="stretch">
                 <i class="material-icons">mail</i>
@@ -200,12 +206,12 @@
             <div class="right_in" style="width:40%; min-width:400px; ">
                 <form style="align-items : center; margin:0px;" action="none" method="post">
                   <h2>Contact Us</h2><br>
-                  <input id="namebox" type="text" placeholder="Full Name"></input>
+                  <input id="namebox" type="text" placeholder="Full Name">
                   <br>
-                  <input id="passwordbox" type="email" placeholder="Your Mail-Id"></input>
+                  <input id="passwordbox" type="email" placeholder="Your Mail-Id">
                   <br>
                   <!--<textarea name="name" rows="8" cols="40"></textarea>-->
-                  <input id="mailbox" type="text" placeholder="Message" style="height:100px;"></input> <br>
+                  <input id="mailbox" type="text" placeholder="Message" style="height:100px;"> <br>
                   <br>
                   <button>Send</button><br>
                 </form>

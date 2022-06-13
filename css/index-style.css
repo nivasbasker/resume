@@ -1,32 +1,35 @@
+
+:root {
+    --light_orange: #FF9800;
+    --dark_green: #022A15;
+}
+
 *{
     margin : 0;
-    color : white;
+    
   }
-  body{
+body {
+    color: white;
     width: 100%;
-    text-align : center;
+    text-align: center;
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
-
+    background-color: var(--light_orange);
     background-image: url('../assets/Frame1.png');
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: 130% 120%;
-
     font-family: 'Nunito', sans-serif;
-
-  }
+}
   header{
     height : 100vh;
     min-height: 800px;
   }
   nav{
-
     padding : 10px;
     padding-top: 5vh;
     width : 70%;
-
     margin : auto;
     display : flex;
 
@@ -37,27 +40,34 @@
     list-style-type: none;
     padding-inline-start : 0px;
   }
-  nav li{
-    line-height : 24px;
-    height : 24px;
-    margin-right : 20px;
-    display :inline;
-  }
-  nav li:hover{
-    border-bottom: 2px solid white;
-  }
+    nav li {
+        line-height: 24px;
+        height: 24px;
+        margin-right: 20px;
+        display: inline;
+        
+    }
+ 
   nav img{
     height: 1.5vw;
     width: 1.5vw;
     vertical-align : middle;
   }
+  
 
-  nav a{
-    height  :20px;
-    font-size: 1.3vw;
-    color : #dbb258;
-    text-decoration : none;
-  }
+    nav a {
+        height: 20px;
+        font-size: 1.3vw;
+        color: white;
+        opacity: 0.85;
+        
+        text-decoration: none;
+    }
+    nav a:hover{
+        opacity : 1;
+       
+        transition : all 0.2s;
+    }
   nav .left{
     width : 35%;
     min-width : 200px;
@@ -78,10 +88,10 @@
     font-weight : 700;
 
   }
-  .center h1{
-    font-size : 2vw;
-    color: #FF9800;
-  }
+    .center h1 {
+        font-size: 2vw;
+        color: var(--light_orange);
+    }
   .stat{
     position : absolute;
     bottom:0;
@@ -186,7 +196,6 @@
   .second{
     margin-top: 30px;
     margin-bottom: 30px;
-    /*background : #011E11;*/
     height : 100vh;
     min-height: 800px;
     min-width: 1000px;
@@ -310,21 +319,61 @@
     background-color: grey;
   }
 
-   .round_img_active{
-    width: 60px;
-    height: 60px;
+.round_img_active {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    box-shadow: 0 8px 32px 0 var(--light_orange);
+    margin: auto;
+    
+    background-color: white;
+}
+.round_img:hover {
     border-radius: 50%;
     margin: auto;
-    border : 3px solid #FF9800;
-    background-color: white;
-  }
-  .btn2{
+    box-shadow: 0 5px 20px 0 var(--light_orange);
+    transition: all 0.5s;
+    transition-timing-function: ease-in-out;
+}
+.button {
+    border-radius: 4px;
+    background-color: var(--light_orange);
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 1.1vw;
     padding: 10px;
-    border:none;
-    border-radius: 10%;
+    width: 120px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
     margin-top: 10%;
-    background-color: #FF9800;
-  }
+}
+
+    .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+
+        .button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+    .button:hover span {
+        padding-right: 20px;
+    }
+
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
 
   .btn1{
     height : 40px;
@@ -358,44 +407,42 @@
     align-items: center;
 
   }
-  .inner2 .material-icons{
-    color: White;
-    padding: 10px;
-    margin: 10px 0px 10px 0px;
-    height: 25px;
-    width : 25px;
-    border-radius: 50%;
-    background-color: #FF9800;;
-  }
+    .inner2 .material-icons {
+        color: White;
+        padding: 10px;
+        margin: 10px 0px 10px 0px;
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        background-color: var(--light_orange);
+    }
   .material-icons:hover{
     cursor: pointer;
   }
   .inner2 h4{
     font-weight: 300;
   }
-  form button {
+form button {
     background: #00000000;
     color: #fff;
-    border: 1px solid #FF9800;
+    border: 1px solid var(--light_orange);
     border-radius: 5px;
     padding: 10px;
     width: 100px;
-  }
+}
   form button:hover{
     cursor: pointer;
     width : 120px;
   }
-  form input {
-
+form input {
     background: #00000000;
     border-color: #00000000;
-    border-bottom: 2px solid #FF9800;
+    border-bottom: 2px solid var(--light_orange);
     padding: 10px;
     margin-bottom: 10px;
     width: 70%;
     color: inherit;
-
-  }
+}
   form input:focus {
     outline: none;
     border-bottom: 2px solid White;
@@ -405,18 +452,16 @@
     margin-bottom : 15px;
   }
 
-  footer{
+footer {
     width: 100%;
     min-height: 150px;
     height: 30vh;
-
-    background: #022A15;
-    border-top-color: #FF9800;
+    background: var(--dark_green);
+    border-top-color: var(--light_orange);
     border-top-width: 3px;
     border-top-style: solid;
     position: relative;
-
-  }
+}
   .lists{
 
     display: flex;
